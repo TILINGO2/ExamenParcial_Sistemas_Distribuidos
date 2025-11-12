@@ -1,0 +1,99 @@
+============================================================
+SISTEMA DE PROCESAMIENTO DISTRIBUIDO
+Comparación: Procesos vs Hilos
+============================================================
+
+📋 Tareas generadas:
+  Task 1: Dificultad 1
+  Task 2: Dificultad 1
+  Task 3: Dificultad 3
+  Task 4: Dificultad 2
+  Task 5: Dificultad 2
+  Task 6: Dificultad 2
+  Task 7: Dificultad 1
+  Task 8: Dificultad 5
+  Task 9: Dificultad 1
+  Task 10: Dificultad 5
+  Task 11: Dificultad 4
+  Task 12: Dificultad 1
+  Task 13: Dificultad 1
+  Task 14: Dificultad 1
+  Task 15: Dificultad 2
+  Task 16: Dificultad 2
+  Task 17: Dificultad 5
+  Task 18: Dificultad 5
+  Task 19: Dificultad 1
+  Task 20: Dificultad 5
+
+============================================================
+EJECUTANDO CON HILOS (THREADS)
+============================================================
+[THREAD] Task 1 completed with difficulty 1, result: 332833500 | Total completed: 1
+[THREAD] Task 2 completed with difficulty 1, result: 332833500 | Total completed: 2
+[THREAD] Task 7 completed with difficulty 1, result: 332833500 | Total completed: 3
+[THREAD] Task 9 completed with difficulty 1, result: 332833500 | Total completed: 4
+[THREAD] Task 12 completed with difficulty 1, result: 332833500 | Total completed: 5
+[THREAD] Task 14 completed with difficulty 1, result: 332833500 | Total completed: 6
+[THREAD] Task 13 completed with difficulty 1, result: 332833500 | Total completed: 7
+[THREAD] Task 19 completed with difficulty 1, result: 332833500 | Total completed: 8
+[THREAD] Task 4 completed with difficulty 2, result: 2664667000 | Total completed: 9
+[THREAD] Task 5 completed with difficulty 2, result: 2664667000 | Total completed: 10
+[THREAD] Task 6 completed with difficulty 2, result: 2664667000 | Total completed: 11
+[THREAD] Task 15 completed with difficulty 2, result: 2664667000 | Total completed: 12
+[THREAD] Task 16 completed with difficulty 2, result: 2664667000 | Total completed: 13
+[THREAD] Task 3 completed with difficulty 3, result: 8995500500 | Total completed: 14
+[THREAD] Task 11 completed with difficulty 4, result: 21325334000 | Total completed: 15
+[THREAD] Task 8 completed with difficulty 5, result: 41654167500 | Total completed: 16
+[THREAD] Task 10 completed with difficulty 5, result: 41654167500 | Total completed: 17
+[THREAD] Task 17 completed with difficulty 5, result: 41654167500 | Total completed: 18
+[THREAD] Task 18 completed with difficulty 5, result: 41654167500 | Total completed: 19
+[THREAD] Task 20 completed with difficulty 5, result: 41654167500 | Total completed: 20
+
+✅ Todas las tareas completadas con hilos
+⏱️  Tiempo total: 0.52 segundos
+📊 Tareas completadas: 20
+
+============================================================
+EJECUTANDO CON PROCESOS (PROCESSES)
+============================================================
+[PROCESS] Task 1 completed with difficulty 1, result: 332833500 | Total completed: 1
+[PROCESS] Task 2 completed with difficulty 1, result: 332833500 | Total completed: 2
+[PROCESS] Task 7 completed with difficulty 1, result: 332833500 | Total completed: 3
+[PROCESS] Task 9 completed with difficulty 1, result: 332833500 | Total completed: 4
+[PROCESS] Task 12 completed with difficulty 1, result: 332833500 | Total completed: 5
+[PROCESS] Task 13 completed with difficulty 1, result: 332833500 | Total completed: 6
+[PROCESS] Task 14 completed with difficulty 1, result: 332833500 | Total completed: 7
+[PROCESS] Task 19 completed with difficulty 1, result: 332833500 | Total completed: 8
+[PROCESS] Task 4 completed with difficulty 2, result: 2664667000 | Total completed: 9
+[PROCESS] Task 5 completed with difficulty 2, result: 2664667000 | Total completed: 10
+[PROCESS] Task 6 completed with difficulty 2, result: 2664667000 | Total completed: 11
+[PROCESS] Task 15 completed with difficulty 2, result: 2664667000 | Total completed: 12
+[PROCESS] Task 16 completed with difficulty 2, result: 2664667000 | Total completed: 13
+[PROCESS] Task 3 completed with difficulty 3, result: 8995500500 | Total completed: 14
+[PROCESS] Task 11 completed with difficulty 4, result: 21325334000 | Total completed: 15
+[PROCESS] Task 8 completed with difficulty 5, result: 41654167500 | Total completed: 16
+[PROCESS] Task 10 completed with difficulty 5, result: 41654167500 | Total completed: 17
+[PROCESS] Task 17 completed with difficulty 5, result: 41654167500 | Total completed: 18
+[PROCESS] Task 18 completed with difficulty 5, result: 41654167500 | Total completed: 19
+[PROCESS] Task 20 completed with difficulty 5, result: 41654167500 | Total completed: 20
+
+✅ Todas las tareas completadas con procesos
+⏱️  Tiempo total: 0.56 segundos
+📊 Tareas completadas: 20
+
+============================================================
+ANÁLISIS DE RESULTADOS
+============================================================
+⏱️  Tiempo con hilos:    0.52 segundos
+⏱️  Tiempo con procesos: 0.56 segundos
+📈 Diferencia:          0.04 segundos
+🏆 Los hilos fueron 1.09x más rápidos
+💡 Razón: Menor overhead de creación y comunicación
+
+============================================================
+CONCEPTOS APLICADOS
+============================================================
+✅ Locks: threading.Lock() previene condiciones de carrera en hilos
+✅ Memoria compartida: multiprocessing.Value para contador entre procesos
+✅ Sincronización: get_lock() para acceso seguro a memoria compartida
+✅ Comparación: Hilos vs Procesos para diferentes cargas de trabajo

@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Primer nodo de MongoDB
+  mongodb1:
+    image: mongo:7.0
+    container_name: mongodb_node1
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=distributed_db
+    volumes:
+      - mongodb1_data:/data/db
+    networks:
+      - distributed_network
+    command: mongod --port 27017
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Segundo nodo de MongoDB
+  mongodb2:
+    image: mongo:7.0
+    container_name: mongodb_node2
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=distributed_db
+    volumes:
+      - mongodb2_data:/data/db
+    networks:
+      - distributed_network
+    command: mongod --port 27017
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongodb1_data:
+    driver: local
+  mongodb2_data:
+    driver: local
+
+networks:
+  distributed_network:
+    driver: bridge
