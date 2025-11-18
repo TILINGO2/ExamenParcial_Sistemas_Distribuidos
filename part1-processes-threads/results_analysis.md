@@ -133,7 +133,7 @@ Tiempo    Hilo/Proceso 1       Hilo/Proceso 2
    - Medir y comparar en tu escenario específico
    - El paralelismo no siempre significa mejor rendimiento
 
-## 🎓 Conceptos Teóricos Demostrados
+##  Conceptos Teóricos Demostrados
 
 -  **Concurrencia vs Paralelismo**
 -  **Condiciones de carrera y cómo evitarlas**
